@@ -6,6 +6,7 @@ _include:
   - "common/twi.yaml"
   - "common/usart.yaml"
   - "common/wdt.yaml"
+  - "common/spi.yaml"
 
   - "timer/atmega324pa.yaml"
 

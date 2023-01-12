@@ -1092,23 +1092,22 @@
     </module>
     <module caption="Serial Peripheral Interface" name="SPI">
       <register-group caption="Serial Peripheral Interface" name="SPI">
-        <register caption="SPI Data Register" name="SPDR0" offset="0x4E" size="1" mask="0xFF" ocd-rw="">
-          <bitfield caption="SPI Data bits" mask="0xFF" name="SPDR0"/>
+        <register caption="SPI Data Register" name="SPDR" offset="0x4E" size="1" mask="0xFF" ocd-rw="">
+          <bitfield caption="SPI Data bits" mask="0xFF" name="SPDR"/>
         </register>
-        <register caption="SPI Status Register" name="SPSR0" offset="0x4D" size="1" ocd-rw="R">
-          <bitfield caption="SPI Interrupt Flag" mask="0x80" name="SPIF0"/>
-          <bitfield caption="Write Collision Flag" mask="0x40" name="WCOL0"/>
-          <bitfield caption="Double SPI Speed Bit" mask="0x01" name="SPI2X0"/>
+        <register caption="SPI Status Register" name="SPSR" offset="0x4D" size="1" ocd-rw="R">
+          <bitfield caption="SPI Interrupt Flag" mask="0x80" name="SPIF"/>
+          <bitfield caption="Write Collision Flag" mask="0x40" name="WCOL"/>
+          <bitfield caption="Double SPI Speed Bit" mask="0x01" name="SPI2X"/>
         </register>
-        <register caption="SPI Control Register" name="SPCR0" offset="0x4C" size="1">
-          <bitfield caption="SPI Interrupt Enable" mask="0x80" name="SPIE0"/>
-          <bitfield caption="SPI Enable" mask="0x40" name="SPE0"/>
-          <bitfield caption="Data Order" mask="0x20" name="DORD0"/>
-          <bitfield caption="Master/Slave Select" mask="0x10" name="MSTR0"/>
-          <bitfield caption="Clock polarity" mask="0x08" name="CPOL0"/>
-          <bitfield caption="Clock Phase" mask="0x04" name="CPHA0"/>
-          <bitfield caption="SPI Clock Rate Select 1" mask="0x02" name="SPR10"/>
-          <bitfield caption="SPI Clock Rate Select 0" mask="0x01" name="SPR00" values="COMM_SCK_RATE_3BIT"/>
+        <register caption="SPI Control Register" name="SPCR" offset="0x4C" size="1">
+          <bitfield caption="SPI Interrupt Enable" mask="0x80" name="SPIE"/>
+          <bitfield caption="SPI Enable" mask="0x40" name="SPE"/>
+          <bitfield caption="Data Order" mask="0x20" name="DORD"/>
+          <bitfield caption="Master/Slave Select" mask="0x10" name="MSTR"/>
+          <bitfield caption="Clock polarity" mask="0x08" name="CPOL"/>
+          <bitfield caption="Clock Phase" mask="0x04" name="CPHA"/>
+          <bitfield caption="SPI Clock Rate Selects" mask="0x03" name="SPR" values="COMM_SCK_RATE_3BIT"/>
         </register>
       </register-group>
       <value-group name="COMM_SCK_RATE_3BIT">
